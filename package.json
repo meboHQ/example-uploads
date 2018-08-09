@@ -1,0 +1,34 @@
+{
+  "name": "example-uploads",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "babel": {
+    "plugins": [
+      "transform-decorators-legacy"
+    ],
+    "presets": [
+      "es2015-node6",
+      "stage-0"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meboHQ/example-uploads.git"
+  },
+  "author": "Paulo Nogueira <paulondc@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "*",
+    "mebo": "*",
+    "morgan": "*"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-decorators-legacy": "*",
+    "babel-preset-es2015-node6": "*",
+    "babel-preset-stage-0": "*",
+    "babel-register": "*"
+  }
+}
