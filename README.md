@@ -2,7 +2,7 @@
   <img src="https://mebohq.github.io/docs/data/logo.png"/>
 </p>
 
-## Super basic upload examples using express
+## Basic upload examples using express
 
 Running example:
 ```
