@@ -19,16 +19,23 @@ NODE_ENV=development node .
 ## Actions
 
 ### Single Upload
-`POST: http://lmebolhost:8080/api/upload`
+`POST: http://localhost:8080/api/upload`
 
 ![postman](./data/postmanUpload.png)
 *running on [postman](https://www.getpostman.com)*
 ---
 
 ###  Vector Upload
-`POST: http://lmebolhost:8080/api/vectorUpload`
+`POST: http://localhost:8080/api/vectorUpload`
 
 ![postman](./data/postmanVectorUpload.png)
+*running on [postman](https://www.getpostman.com)*
+---
+
+###  Upload with cleanup
+`POST: http://localhost:8080/api/cleanupVectorUpload`
+
+![postman](./data/postmanCleanupVectorUpload.png)
 *running on [postman](https://www.getpostman.com)*
 
 ## Licensing
