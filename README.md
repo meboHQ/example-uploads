@@ -23,6 +23,7 @@ NODE_ENV=development node .
 
 ![postman](./data/postmanUpload.png)
 *running on [postman](https://www.getpostman.com)*
+
 ---
 
 ###  Vector Upload
@@ -30,6 +31,7 @@ NODE_ENV=development node .
 
 ![postman](./data/postmanVectorUpload.png)
 *running on [postman](https://www.getpostman.com)*
+
 ---
 
 ###  Vector Upload With Clean-up
