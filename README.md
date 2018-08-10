@@ -32,7 +32,7 @@ NODE_ENV=development node .
 *running on [postman](https://www.getpostman.com)*
 ---
 
-###  Upload with cleanup
+###  Vector Upload With Clean-up
 `POST: http://localhost:8080/api/cleanupVectorUpload`
 
 ![postman](./data/postmanCleanupVectorUpload.png)
