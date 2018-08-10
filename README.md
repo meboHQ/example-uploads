@@ -22,7 +22,8 @@ NODE_ENV=development node .
 `POST: http://localhost:8080/api/upload`
 
 ![postman](./data/postmanUpload.png)
-*running on [postman](https://www.getpostman.com)*
+
+##### *running on [postman](https://www.getpostman.com)*
 
 ---
 
@@ -30,7 +31,8 @@ NODE_ENV=development node .
 `POST: http://localhost:8080/api/vectorUpload`
 
 ![postman](./data/postmanVectorUpload.png)
-*running on [postman](https://www.getpostman.com)*
+
+##### *running on [postman](https://www.getpostman.com)*
 
 ---
 
@@ -38,7 +40,8 @@ NODE_ENV=development node .
 `POST: http://localhost:8080/api/cleanupVectorUpload`
 
 ![postman](./data/postmanCleanupVectorUpload.png)
-*running on [postman](https://www.getpostman.com)*
+
+##### *running on [postman](https://www.getpostman.com)*
 
 ## Licensing
 Mebo is free software; you can redistribute it and/or modify it under the terms of the MIT License
