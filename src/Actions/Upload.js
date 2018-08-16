@@ -9,14 +9,14 @@ class Upload extends Mebo.Action{
     this.createInput('description?: text', {max: 255});
   }
 
-  _perform(data){
+  async _perform(data){
 
     // handling file
     // ...
-    return Promise.resolve({
+    return {
       image: data.image,
       description: data.description,
-    });
+    };
   }
 }
 
