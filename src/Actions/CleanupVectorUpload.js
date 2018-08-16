@@ -15,26 +15,24 @@ class CompleteVectorUpload extends Mebo.Action{
     this.createInput('description?: text', {max: 255});
   }
 
-  _perform(data){
+  async _perform(data){
 
     // in case the files are not handled (like the example below) they are deleted
     // automatically by the _finalize which is also called when the action has failed.
     // Therefore, providing the oportunity to delete temporary files, write logs, etc...
-    return Promise.resolve({
+    return {
       images: data.images,
       description: data.description,
-    });
+    };
   }
 
-  _finalize(err, value){
+  async _finalize(err, value){
 
     // using the finalize to purge the uploaded file in case it was not handled
     // during the _perform (basically doing a cleanup operation).
     const cleanup = this.createAction('cleanup');
     cleanup.input('files').setupFrom(this.input('images'));
     this.session().wrapup().addAction(cleanup);
-
-    return super._finalize(err, value);
   }
 }
 
