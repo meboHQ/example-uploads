@@ -9,14 +9,14 @@ class VectorUpload extends Mebo.Action{
     this.createInput('description?: text', {max: 255});
   }
 
-  _perform(data){
+  async _perform(data){
 
     // handling files
     // ...
-    return Promise.resolve({
+    return {
       images: data.images,
       description: data.description,
-    });
+    };
   }
 }
 
