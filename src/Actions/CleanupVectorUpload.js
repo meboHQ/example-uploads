@@ -26,7 +26,7 @@ class CompleteVectorUpload extends Mebo.Action{
     };
   }
 
-  async _finalize(err, value){
+  async _after(err, value){
 
     // using the finalize to purge the uploaded file in case it was not handled
     // during the _perform (basically doing a cleanup operation).
