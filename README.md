@@ -25,6 +25,11 @@ NODE_ENV=development node .
 
 ##### *running on [postman](https://www.getpostman.com)*
 
+*Command-line version:*
+
+```bash
+node . --cli upload --image=/tmp/foo.png --description="foo description"
+```
 ---
 
 ###  Vector Upload
@@ -34,6 +39,11 @@ NODE_ENV=development node .
 
 ##### *running on [postman](https://www.getpostman.com)*
 
+*Command-line version:*
+
+```bash
+node . --cli vectorUpload --images=/tmp/foo1.png --images=/tmp/foo2.png --description="foo description"
+```
 ---
 
 ###  Vector Upload With Clean-up
@@ -42,6 +52,12 @@ NODE_ENV=development node .
 ![postman](./data/postmanCleanupVectorUpload.png)
 
 ##### *running on [postman](https://www.getpostman.com)*
+
+*Command-line version:*
+
+```bash
+node . --cli cleanupVectorUpload --images=/tmp/foo1.png --images=/tmp/foo2.png --description="foo description"
+```
 
 ## Licensing
 Mebo is free software; you can redistribute it and/or modify it under the terms of the MIT License

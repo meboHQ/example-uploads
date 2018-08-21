@@ -1,5 +1,6 @@
 const Mebo = require('mebo');
 
+@Mebo.grant('cli')
 @Mebo.grant('web', {method: 'post', restRoute: '/vectorUpload'})
 @Mebo.register('vectorUpload')
 class VectorUpload extends Mebo.Action{

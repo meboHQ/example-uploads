@@ -6,6 +6,7 @@ const Mebo = require('mebo');
 const access = util.promisify(fs.access);
 const unlink = util.promisify(fs.unlink);
 
+@Mebo.grant('cli')
 @Mebo.grant('web', {method: 'post', restRoute: '/cleanupVectorUpload'})
 @Mebo.register('cleanupVectorUpload')
 class CompleteVectorUpload extends Mebo.Action{
@@ -18,7 +19,7 @@ class CompleteVectorUpload extends Mebo.Action{
   async _perform(data){
 
     // in case the files are not handled (like the example below) they are deleted
-    // automatically by the _finalize which is also called when the action has failed.
+    // automatically by the _after which is also called when the action has failed.
     // Therefore, providing the oportunity to delete temporary files, write logs, etc...
     return {
       images: data.images,
@@ -27,12 +28,14 @@ class CompleteVectorUpload extends Mebo.Action{
   }
 
   async _after(err, value){
-
-    // using the finalize to purge the uploaded file in case it was not handled
-    // during the _perform (basically doing a cleanup operation).
-    const cleanup = this.createAction('cleanup');
-    cleanup.input('files').setupFrom(this.input('images'));
-    this.session().wrapup().addAction(cleanup);
+    // using the 'after' to purge the uploaded files in case it was not handled
+    // during the _perform (basically doing a cleanup operation). This
+    // is only performed by the web handler
+    if (this.session().has('handler') && this.session().get('handler') == 'web'){
+      const cleanup = this.createAction('cleanup');
+      cleanup.input('files').setupFrom(this.input('images'));
+      this.session().wrapup().addAction(cleanup);
+    }
   }
 }
 

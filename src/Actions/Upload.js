@@ -1,5 +1,6 @@
 const Mebo = require('mebo');
 
+@Mebo.grant('cli')
 @Mebo.grant('web', {method: 'post', restRoute: '/upload'})
 @Mebo.register('upload')
 class Upload extends Mebo.Action{

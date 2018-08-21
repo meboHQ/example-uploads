@@ -7,5 +7,15 @@ require('babel-register');
 // registering actions
 require('./Actions');
 
-// loading server
-require('./server');
+/// Command-line support:
+// node . --cli
+if (require.main === module && process.argv.includes('--cli')) {
+  Mebo.Handler.get('cli').init();
+}
+
+// Web support:
+// node .
+else {
+  // loading server
+  require('./server');
+}
