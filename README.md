@@ -23,8 +23,6 @@ NODE_ENV=development node .
 
 ![postman](./data/postmanUpload.png)
 
-##### *running on [postman](https://www.getpostman.com)*
-
 *Command-line version:*
 
 ```bash
@@ -37,8 +35,6 @@ node . --cli upload --image=/tmp/foo.png --description="foo description"
 
 ![postman](./data/postmanVectorUpload.png)
 
-##### *running on [postman](https://www.getpostman.com)*
-
 *Command-line version:*
 
 ```bash
@@ -50,8 +46,6 @@ node . --cli vectorUpload --images=/tmp/foo1.png --images=/tmp/foo2.png --descri
 `POST: http://localhost:8080/api/cleanupVectorUpload`
 
 ![postman](./data/postmanCleanupVectorUpload.png)
-
-##### *running on [postman](https://www.getpostman.com)*
 
 *Command-line version:*
 
