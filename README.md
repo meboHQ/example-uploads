@@ -26,7 +26,9 @@ NODE_ENV=development node .
 *Command-line version:*
 
 ```bash
-node . --cli upload --image=/tmp/foo.png --description="foo description"
+node . --help
+node . upload --help
+node . upload --image=/tmp/foo.png --description="foo description"
 ```
 ---
 
@@ -38,7 +40,9 @@ node . --cli upload --image=/tmp/foo.png --description="foo description"
 *Command-line version:*
 
 ```bash
-node . --cli vectorUpload --images=/tmp/foo1.png --images=/tmp/foo2.png --description="foo description"
+node . --help
+node . vectorUpload --help
+node . vectorUpload --images=/tmp/foo1.png --images=/tmp/foo2.png --description="foo description"
 ```
 ---
 
@@ -50,7 +54,9 @@ node . --cli vectorUpload --images=/tmp/foo1.png --images=/tmp/foo2.png --descri
 *Command-line version:*
 
 ```bash
-node . --cli cleanupVectorUpload --images=/tmp/foo1.png --images=/tmp/foo2.png --description="foo description"
+node . --help
+node . cleanupVectorUpload --help
+node . cleanupVectorUpload --images=/tmp/foo1.png --images=/tmp/foo2.png --description="foo description"
 ```
 
 ## Licensing

@@ -8,9 +8,10 @@ require('babel-register');
 require('./Actions');
 
 /// Command-line support:
-// node . --cli
-if (require.main === module && process.argv.includes('--cli')) {
-  Mebo.Handler.get('cli').init();
+// node . --help
+const cli = Mebo.Handler.get('cli');
+if (cli.isSupported()){
+  cli.init();
 }
 
 // Web support:

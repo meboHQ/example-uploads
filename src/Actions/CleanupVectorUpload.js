@@ -20,7 +20,7 @@ class CompleteVectorUpload extends Mebo.Action{
 
     // in case the files are not handled (like the example below) they are deleted
     // automatically by the _after which is also called when the action has failed.
-    // Therefore, providing the oportunity to delete temporary files, write logs, etc...
+    // Therefore, providing the opportunity to delete temporary files, write logs, etc...
     return {
       images: data.images,
       description: data.description,
@@ -39,7 +39,7 @@ class CompleteVectorUpload extends Mebo.Action{
   }
 }
 
-// registering an action that is going to be used during the session wrapup
+// registering an action that is going to be used during the session wrap-up
 // to delete any uploaded file that has not been moved
 @Mebo.register('cleanup')
 class Cleanup extends Mebo.Action{
